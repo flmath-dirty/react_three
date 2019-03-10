@@ -21,36 +21,26 @@ Create empty repo:
 reference https://gist.github.com/alexpchin/dc91e723d4db5018fef8
 
 add travis.yml
-
+```yml
 language: node_js
-
 node_js:
-
   - "stable"
   
 cache:
-
   directories:
-  
   - node_modules
   
 script:
-
-  - npm test
-  
+  - npm test 
   - npm run build
   
 deploy:
-
-  provider: pages
-  
+  provider: pages 
   skip_cleanup: true
-  
   github_token: $ <span style="color:red">github_token_5</span>
   local_dir: build
-  
-  on:
-  
+
+  on:  
 branch: master
 
 
