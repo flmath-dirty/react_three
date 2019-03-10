@@ -44,4 +44,37 @@ deploy:
 branch: master
 ```
 
-ok
+Modify package.json
+```json
+
+30 lines (29 sloc) 592 Bytes
+{
+  "name": "react_two",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://flmath-dirty.github.io/react_two/",
+  "dependencies": {
+    "react": "16.8.3",
+    "react-dom": "16.8.3",
+    "react-scripts": "2.1.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "gh-pages": "^2.0.1"
+  }
+}
+```
