@@ -37,11 +37,10 @@ script:
 deploy:
   provider: pages 
   skip_cleanup: true
-  github_token: $ <span style="color:red">github_token_5</span>
+  github_token: {color:red;}$github_token_5
   local_dir: build
 
   on:  
 branch: master
-
-
+```
 
