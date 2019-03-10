@@ -37,7 +37,7 @@ script:
 deploy:
   provider: pages 
   skip_cleanup: true
-  github_token: {color:red;}$github_token_5
+  github_token: <style>{color:red;}$github_token_5</style>
   local_dir: build
 
   on:  
