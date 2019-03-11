@@ -24,8 +24,9 @@ add travis.yml
 ```yml
 language: node_js
 node_js:
-  - "stable"
-  
+   - "11.10.1"  
+#  - "stable"
+# Stable nodejs has bug: https://github.com/facebook/jest/issues/8069
 cache:
   directories:
   - node_modules
@@ -49,10 +50,10 @@ Modify package.json
 
 30 lines (29 sloc) 592 Bytes
 {
-  "name": "react_two",
+  "name": "greens_pages",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://flmath-dirty.github.io/react_two/",
+  "homepage": "https://flmath.github.io/greens_pages/",
   "dependencies": {
     "react": "16.8.3",
     "react-dom": "16.8.3",
@@ -78,3 +79,23 @@ Modify package.json
   }
 }
 ```
+Generate token in github:
+
+https://github.com/settings/tokens -> Generate new token
+
+Github token description: github_token_5
+Choose all repo options
+
+Generate token
+Save the hash!!!
+
+Set token in travis.
+Go to https://travis-ci.org/ and sign with github
+Swith on green_pages and go to settings.
+Add in Environment Variables: github_token_5 token hash
+
+Synchronize package-lock with package
+ > npm8 install 
+ > git commit
+ > git push
+ 
